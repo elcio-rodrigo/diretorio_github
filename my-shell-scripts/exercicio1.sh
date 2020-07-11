@@ -1,4 +1,5 @@
 #!/bin/bash
 # Vou ter muito sucesso na programação!
-# Eu sou Tryber e... ok
+<<<<<<< HEAD
+# Eu sou Tryber e...1
 echo "Shell Script é demais!"
