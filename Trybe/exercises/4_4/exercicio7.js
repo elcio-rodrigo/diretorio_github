@@ -1,3 +1,4 @@
+//crie uma função que receba um array de inteiros e retorne o índice do maior valor
 function indexMaior(inteiros) {
     let iMaior = 0;
     for (let i in inteiros) {
