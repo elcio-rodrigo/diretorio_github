@@ -1,4 +1,4 @@
-//quadrado na tela
+// quadrado na tela
 let n = 5;
 let asterisco = " * ";
 let linha = "";
