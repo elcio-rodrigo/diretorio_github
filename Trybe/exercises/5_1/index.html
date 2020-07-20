@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+ Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+ Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe.
+ Crie uma função que mude a cor do quadrado vermelho para branco.
+ Crie uma função que corrija o texto da tag <h1>.
+ Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+        // Exercicio 1
+        function mudaTexto() {
+            let texto = document.getElementsByTagName('p')[1];
+            texto.innerHTML = "Dois anos mais velho."
+        }
+        mudaTexto();
+        // Exercicio 2
+        function mudaCorQuadrado() {
+            let quadrado = document.getElementsByClassName('main-content')[0];
+            quadrado.style.background = "#059819";
+        }
+        mudaCorQuadrado();
+        // Exerecicio 3
+        function retangulo() {
+            let retang = document.getElementsByClassName('center-content')[0];
+            retang.style.background = "#ffffff";
+        }
+        retangulo();
+        // Exercicio 4
+        function corrigeH1() {
+            let aga1 = document.getElementsByClassName('title')[0];
+            aga1.innerHTML = "Exercício 5.1 - JavaScript"
+        }
+        corrigeH1();
+        // Exercício 5
+        function paragrafoMaiusculo() {
+            let paragrafo = document.getElementsByTagName('p')[0];
+            paragrafo.innerHTML = paragrafo.innerHTML.toUpperCase();
+        }
+        paragrafoMaiusculo();
+        // Exercício 6
+        function exibirParagrafos() {
+            paragrafos = document.getElementsByTagName('p');
+            for (let i = 0; i < paragrafos.length; i += 1) {
+                console.log(paragrafos[i].innerHTML);
+            }
+        }
+        exibirParagrafos();
+    </script>
+  </body>
+</html>
