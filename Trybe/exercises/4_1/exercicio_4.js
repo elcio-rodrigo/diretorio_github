@@ -3,7 +3,7 @@ function positivoNegativo(a) {
         return "Positive";
     }
     else if (a < 0) {
-        return "Negatuve";
+        return "Negative";
     }
     else {
         return "Zero";
