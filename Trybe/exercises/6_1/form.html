@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+
+<body id="corpo">
+  <form class="form">
+    <div class="form-row">
+    <div class="line-content">
+      <fieldset id="1">
+        <div class="line-content">
+        <label>Nome</label>
+        <input id="nome" type="text" placeholder="Digite seu Nome" required="required" maxlength="40"></div>
+        <div class="line-content">
+        <label>E-mail</label>
+        <input id="email" type="text"   placeholder="e-mail@e-mail.com" maxlength="50" required="required"></div>
+        <div class="line-content">
+        <label>CPF</label>
+        <input id="cpf" type="text" placeholder="Digite seu CPF" maxlength="11" required="required"></div>
+        <div class="line-content">
+        <label>Endereço</label>
+        <input id="endereco" type="text" placeholder="Digite seu Endereço" maxlength="200" required="required"></div>
+        <div class="line-content">
+        <label>Cidade</label>
+        <input id="cidade" type="text" placeholder="Digite sua Cidade" maxlength="28" required="required"></div>
+        <div class="line-content">
+        <label>Estado</label>
+        <select id="estados"></select>
+      </div>
+        <div class="line-content">
+        <label>Moradia</label><br>
+        <input type="radio" name="moradia" value="Casa" required="required">Casa
+        <input type="radio" name="moradia" value="Apartamento"  required="required">Apartamento</div>
+      </fieldset>
+  </div>
+    <div class="line-content">
+      <fieldset id="2">
+        <div class="line-content">
+          <label>Resumo do Currículo</label>
+          <textarea cols="50" rows="5" maxlength="1000" required="required"></textarea>
+        </div>
+        <label>Cargo</label>
+        <input type="text" maxlength="40" required="required">
+        <label>Descrição do Cargo</label>
+        <input type="text" maxlength="500" required="required">
+        <label>Data de Início</label>
+        <input type="date" required="required">
+        <button id="dados">Dados</button>
+        <button>Limpar</button>
+        <div id="show-data"></div>
+      </fieldset>
+  </div>
+</div>
+  </form>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
