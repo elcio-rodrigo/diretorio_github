@@ -21,3 +21,11 @@
     font-size: 14px;
     width: 97%;
   }
+  body {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+  }
+  /* .show {
+    border: 10px solid black;
+  } */
