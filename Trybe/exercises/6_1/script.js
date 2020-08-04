@@ -4,10 +4,12 @@ new JustValidate('.js-form', {
             required: true
         },
         email: {
-            required: true
+            required: true,
+            email: true
         },
         cpf: {
-            required: true
+            required: true,
+            maxLength: 11
         },
         endereco: {
             required: true
