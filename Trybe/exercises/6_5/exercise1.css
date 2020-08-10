@@ -1,0 +1,39 @@
+body {
+  font-size: 1.2em;
+  margin: 15px;
+}
+h1 {
+ font-size: 1.2em;
+}
+h2 {
+  font-size: 1.2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 10px;
+}
+
+@media screen and (min-width: 505px) {
+    body {
+        background-color: green;
+        font-size: 1em;
+        margin: 0px;
+    }
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
+@media screen and (min-width: 945px) {
+    body {
+        background-color: blue;
+        font-size: 1.2em;
+        margin: 15px;
+        max-width: 1300px;
+    }
+}

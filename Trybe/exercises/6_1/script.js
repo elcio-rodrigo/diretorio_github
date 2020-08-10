@@ -47,13 +47,20 @@ for (let i = 0; i < uf.length; i++) {
     estado.innerText = uf[i];
     state.appendChild(estado);
 }
-function mostrarDados() {
-    let nome = document.querySelector('.name').value;
-    let div = document.getElementById('show-data');
-    
-    div.innerHTML = nome;
+// function mostrarDados(e) {
+//     e.preventDefault();
+//     let nome = document.querySelector('.name').value;
+//     let div = document.getElementById('show-data');
+       
+//     div.innerHTML = nome;
 
-}
-let btnShow = document.getElementById('dados');
-btnShow.addEventListener('click', mostrarDados);
+// }
+// let btnShow = document.getElementById('dados');
+// btnShow.addEventListener('click', mostrarDados);
 document.getElementById('data').DatePickerX.init();
+const form = document.querySelector('#formulario');
+const inputName = document.querySelector('#name');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.querySelector('#show-data').innerHTML = inputName.value;
+})
