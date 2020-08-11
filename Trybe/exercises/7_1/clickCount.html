@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickCount</title>
+</head>
+<body>
+    <p id="contador"></p>
+    <button id="count">Click Count</button>
+    <script>
+        let clickCount = 0;
+        let show = document.getElementById("contador");
+        document.getElementById('count').addEventListener('click', () => show.innerHTML = clickCount += 1);
+    </script>
+</body>
+</html>
