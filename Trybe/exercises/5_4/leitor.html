@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leitor</title>
+    <style>
+        body {
+            margin: 10px;
+        }
+        .escolhas {
+            margin-right: 20px;
+            float: left;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+        .colunas {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="escolhas">
+    <div id="background" class="colunas">
+        <span class="texto">Escolha a cor de fundo</span>
+        <button>Black</button>
+        <button>Blue</button>
+        <button>Red</button>
+        <button>Green</button>
+    </div>
+    <div id="fontcolor" class="colunas">
+        <span class="texto">Escolha a cor do texto</span>
+        <button>Black</button>
+        <button>Blue</button>
+        <button>Red</button>
+        <button>White</button>
+    </div>
+    <div id="fontsize" class="colunas">
+        <span class="texto">Escolha o tamanho do texto</span>
+        <button>10px</button>
+        <button>12px</button>
+        <button>14px</button>
+        <button>16px</button>
+    </div>
+    <div id="spaceline" class="colunas">
+        <span class="texto">Espaçamento entre linhas</span>
+        <button>1.0</button>
+        <button>2.0</button>
+        <button>3.0</button>
+        <button>4.0</button>
+    </div>
+    <div id="fontfamily" class="colunas">
+        <span class="texto">Escolha a fonte do texto</span>
+        <button>Arial</button>
+        <button>Verdana</button>
+        <button>Courier</button>
+        <button>Times New Roman</button>
+    </div>
+</div>
+    
+    <div class="title">
+        <h1 class="texto">Lorem Ipsum</h1>
+    </div>
+    <div class="title">
+        <h5 class="texto">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."<br>
+        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+    </div>
+    
+   <div class="content">
+        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur libero sed viverra facilisis. Etiam fermentum venenatis nibh a venenatis. Nulla est justo, fringilla eu dapibus non, viverra in quam. Duis nec varius tortor. Nulla vitae tortor porta elit lacinia finibus. Pellentesque a molestie diam. Fusce euismod ex a erat porttitor, et commodo libero facilisis. Sed non ante est. Aliquam tellus risus, feugiat gravida odio et, dictum rutrum orci. Cras quis maximus purus, a varius dolor. Integer vitae pulvinar sapien.</p>
+
+        <p class="texto">Integer sed turpis orci. Cras maximus est eu blandit scelerisque. Quisque id vehicula purus, ut tincidunt erat. Vivamus luctus laoreet luctus. Aliquam accumsan sed mi a condimentum. Ut varius lorem id congue dignissim. Morbi eget fermentum mauris. Etiam tincidunt nec metus sit amet tristique. Aenean nec eros dictum orci venenatis tincidunt. Curabitur augue ex, sodales at rutrum vel, maximus quis massa. Maecenas ornare nunc purus, ut commodo leo luctus eu. Nulla dapibus dolor et magna lobortis, a volutpat felis ultrices. Morbi nisl massa, venenatis vitae tincidunt non, elementum at ipsum.</p>
+
+        <p class="texto">Maecenas molestie magna ac massa fermentum, eu malesuada sapien commodo. Sed vitae est odio. Nullam molestie lectus augue, non tincidunt mauris lacinia in. Aliquam sit amet sodales nulla. Nullam porta diam vitae feugiat venenatis. Nulla vel tortor ut nulla consequat mattis sit amet vel eros. Nulla et erat neque.</p>
+
+        <p class="texto">Sed vitae eros nulla. Proin lacinia eu lacus ut pellentesque. Nullam at magna felis. Maecenas quis sagittis massa. Integer ut pretium nibh. Quisque dapibus convallis arcu non lobortis. Proin quis purus laoreet, tristique eros et, pretium elit. In hac habitasse platea dictumst. Suspendisse potenti. Praesent vel odio ut eros scelerisque tristique. Cras lacinia a urna eu ornare.</p>
+
+        <p class="texto">Maecenas sollicitudin tortor massa, eu laoreet orci semper nec. Sed non magna egestas, malesuada odio nec, mollis mauris. Pellentesque faucibus diam non rutrum congue. Sed et odio consequat, semper risus ac, aliquam lorem. Nunc bibendum eu mauris at commodo. Nam viverra neque et placerat congue. Praesent eu eros eu enim cursus pulvinar.</p>
+    </div>
+    <script>
+        window.onload = function() {
+            function background(color) {
+                let fundo = document.querySelector('body');
+                fundo.style.backgroundColor = color;
+                localStorage.setItem('backgroundColor', color);
+            }
+            function fonte(color) {
+                let text = document.querySelectorAll('.texto');
+                for (let i = 0; i < text.length; i += 1) {
+                    text[i].style.color = color;
+                }
+                localStorage.setItem('fontColor', color);
+            }
+            function fonteSize(size) {
+                let text = document.querySelectorAll('.texto');
+                for (let i = 0; i < text.length; i += 1) {
+                    text[i].style.fontSize = size;
+                }
+                localStorage.setItem('fontSize', size);
+            }
+            function espacamento(height) {
+                let text = document.querySelectorAll('.texto');
+                for (let i = 0; i < text.length; i += 1) {
+                    text[i].style.lineHeight = height;
+                }
+                localStorage.setItem('lineHeight', height);
+            }
+            function tipoFonte(family) {
+                let text = document.querySelectorAll('.texto');
+                for (let i = 0; i < text.length; i += 1) {
+                    text[i].style.fontFamily = family;
+                }
+                localStorage.setItem('fontFamily', family);
+            }
+            let btnBack = document.querySelectorAll('#background>button');
+            for (let i = 0; i < btnBack.length; i += 1) {
+                btnBack[i].addEventListener('click', function(event) {
+                    background(event.target.innerHTML)
+                })
+            }
+            let btnFont = document.querySelectorAll('#fontcolor>button');
+            for (let i = 0; i < btnBack.length; i += 1) {
+                btnFont[i].addEventListener('click', function(event) {
+                    fonte(event.target.innerHTML)
+                })
+            }
+            let btnSize = document.querySelectorAll('#fontsize>button');
+            for (let i = 0; i < btnBack.length; i += 1) {
+                btnSize[i].addEventListener('click', function(event) {
+                    fonteSize(event.target.innerHTML)
+                })
+            }
+            let btnLine = document.querySelectorAll('#spaceline>button');
+            for (let i = 0; i < btnBack.length; i += 1) {
+                btnLine[i].addEventListener('click', function(event) {
+                    espacamento(event.target.innerHTML)
+                })
+            }
+            let btnFam = document.querySelectorAll('#fontfamily>button');
+            for (let i = 0; i < btnBack.length; i += 1) {
+                btnFam[i].addEventListener('click', function(event) {
+                    tipoFonte(event.target.innerHTML)
+                })
+            }
+            function Storage() {
+                let fundo = localStorage.getItem('backgroundColor');
+                if (fundo) {
+                    background(fundo);
+                }
+                let corfonte = localStorage.getItem('fontColor');
+                if (corfonte) {
+                    fonte(corfonte);
+                }
+                let sizefonte = localStorage.getItem('fontSize');
+                if (sizefonte) {
+                    fontesize(sizefonte);
+                }
+                let linha = localStorage.getItem('lineHeight');
+                if (linha) {
+                    espacamento(linha);
+                }
+                let tipo = localStorage.getItem('fontFamily');
+                if (tipo) {
+                    tipoFonte(tipo);
+                }
+            }
+            Storage();
+        }
+        
+
+    </script>
+</body>
+</html>

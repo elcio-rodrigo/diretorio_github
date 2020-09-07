@@ -1,0 +1,88 @@
+/* exercicio 1 */
+.tower-group-1 {
+  display: flex;
+  justify-content: center;
+}
+/* exercicio 2 */
+.tower-group-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+/* exercicio 3 */
+.tower-group-1 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: space-between;
+}
+/* exercicio 4 */
+.tower-group-1 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: space-between;
+}
+/* exercicio 5 */
+.tower-group-1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.tower-group-2 {
+  display: flex;
+  justify-content: center;
+}
+.tower-group-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* exercicio 6 */
+.tower-group-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* exercicio 7 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+}
+/* exercicio 8 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: column;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* exercicio 9 */
+.tower-group-1 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.tower-group-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
