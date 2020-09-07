@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/DatePickerX.min.css">
+    <script type="text/javascript" src="js/DatePickerX.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulário</title>
+  </head>
+
+<body id="corpo">
+  <h1 class="title has-text-centered">Formulário</h1>
+  <div class="show" id="resumo-form"></div>
+  <form class="js-form">
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <input data-validate-field="name" name="name" class="input name" id="name" type="text" placeholder="Digite seu Nome" minlength="3" maxlength="15">
+
+      </div>
+
+    </div>
+    
+      <div class="field">
+        <label class="label">E-mail</label>
+        <div class="control">
+          <input data-validate-field="email" name="email" class="input" id="email" type="text"   placeholder="e-mail@e-mail.com" maxlength="50" >
+
+        </div>
+      </div>
+      
+        
+      <div class="field">
+        <label class="label">CPF</label>
+        <div class="control">
+          <input data-validate-field="cpf" class="input" id="cpf" name="cpf" data-validate-field="" type="text" placeholder="Digite seu CPF">
+
+        </div>
+      </div>
+        <div class="field">
+          <label class="label">Endereço</label>
+          <div class="control">
+            <input data-validate-field="endereco" name="endereco" class="input" id="endereco" type="text" placeholder="Digite seu Endereço" maxlength="200">
+
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Cidade</label>
+          <div class="control">
+            <input data-validate-field="cidade" name="cidade" class="input" id="cidade" type="text" placeholder="Digite sua Cidade" maxlength="28">
+
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Estado</label>
+          <div class="control">
+            <select data-validate-field="estado" name="estado" class="select estado" id="estados"></select>
+
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Moradia</label><br>
+          <div class="control">
+            <label class="label"><input data-validate-field="moradia" class="radio" type="radio" name="moradia" value="Casa"> Casa</label>
+            <label class="label"><input data-validate-field="moradia" class="radio" type="radio" name="moradia" value="Apartamento"> Apartamento</label> 
+
+          </div>
+        </div>
+          <div class="field">
+            <label class="label">Resumo do Currículo</label>
+            <div class="control">
+              <textarea data-validate-field="resumo" name="resumo" class="textarea" id="resumo" cols="50" rows="5" maxlength="1000"></textarea>
+
+            </div>
+          </div>    
+        
+        <div class="field">
+          <label class="label">Cargo</label>
+          <div class="control">
+            <input data-validate-field="cargo" name="cargo" class="input" id="cargo" type="text" maxlength="40">
+            
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Descrição do Cargo</label>
+          <div class="control">
+            <input data-validate-field="descricao" name="descricao" class="input" id="descricao" type="text" minlength="5" maxlength="300">
+            
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Data de Início</label>
+          <div class="control">
+            <input data-validate-field="data" name="data" class="input data" id="data" type="text">
+            <button class="button is-success" id="dados">Mostrar Dados</button>
+            <button class="button is-danger">Limpar</button>
+            
+          </div>
+        </div>
+        <div id="show-data"></div>
+        
+        
+
+  </form>
+  <script src="js/just-validate.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
